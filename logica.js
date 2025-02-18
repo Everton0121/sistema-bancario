@@ -30,24 +30,24 @@ function depositar() {
 // funçao que realiza o saque 
 
 function sacar() {
-    // obtem o valor digtado pelo usuario e converte para decimal 
+    // Obtém o valor digtado pelousuário e converte para decimal
     valor = parseFloat(document.getElementById('valor').value)
-    // verificar se o valor e valido 
-    if (isNaN(valor) || valor <= 0)
-    alert("por favor, insira um valor valido para sacar!")
-    return
-}
-//verificar se o saldo e suficiente
-    if  (valor > saldo) {
-    alert("Bah! ta pobrinho kkkkk!Saldo insuficiente")
-    return
+    // Verificar se o valor é válido
+    if (isNaN(valor) || valor <= 0) {
+        alert("Por favor, insira um valor válido parça!")
+        return
     }
-//subtrai o valor do saldo
-saldo -= valor
-
-// atualizar o saldo
-atualizarSaldo()
-alert("saque de R$" + valor.toFixed(2) + "  realizado com sucesso!")
-
+    // verificar se o saldo é suficiete
+    if (valor > saldo) {
+        alert("Pá! tA pobre!Saldo Insuficiente")
+        return
+    }
+    // Subtrai o valor do saldo 
+    saldo -= valor
+    
+    // Atualizar o saldo
+    atualizarSaldo()
+    alert("Saque de R$ "+ valor.toFixed(2) + "  realizado com sucesso!")
+}
 
 
