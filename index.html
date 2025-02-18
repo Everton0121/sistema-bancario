@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!--tri, define o idioma-->
+<head>
+    <meta charset="UTF-8"> <!--codificação de caracteres(arruma os acentos)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Sistema Bancário</title><!--título da aba-->
+    <!-- link para o arquivo CSS externo  -->
+    <link rel="stylesheet" href="style.css">
+    <!--inclusao do script JS externo que vai controlar as operacoes bancarias-->
+    <script src="logica.js"></script>
+</head>
+
+<body>
+    <!--Contêiner principal para o conteúdo da interface -->
+    <div class="container">
+    <!--Título principal da aplicação -->
+    <h1>Sistema Bancário Tri</h1><!-- Quanto maior o numero menor a letra -->
+
+    <!--campo de entrada para valor-->
+    <label form="valor">digite um valor:</label><!-- rotulo para o campo de valor -->
+    <input type="number" id="valor" placeholder="ex: 100.00"><br> <!-- campo para inserir o valor -->
+    <!-- botões para interagir com a conta a conta bancaria -->
+    <button class="botao1" onclick="sacar()">sacar</button><!-- Botao para realizar o saque -->
+    <button class="botao2" onclick="depositar()"> depositar</button>
+        <!--botao para realizar o deposito-->
+        <!-- exibindo o saldo atual da conta-->
+        <div class="balance">
+            Saldo: R$ <span id="saldo">00.00</span> <!-- Exibição dinâmica do saldo-->
+        </div>
+    </div>
+    
+
+
+
+        
+</body>
+
+</html>
